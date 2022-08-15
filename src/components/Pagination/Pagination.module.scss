@@ -1,0 +1,98 @@
+@import "../../styles/index.scss";
+
+.pagination {
+	margin-top: 35px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.line {
+		height: 2px;
+		width: 100%;
+		background-color: $yellow;
+		margin-right: 12px;
+	}
+
+	.pages {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		flex-shrink: 0;
+
+		span {
+			font-size: 13px;
+			font-weight: 600;
+		}
+
+		.page__input {
+			width: auto;
+			max-width: 50px;
+			padding: 10px 10px;
+			background-color: $yellow;
+			border-radius: 10px;
+			color: $black;
+			font-weight: 600;
+			text-align: center;
+			appearance: textfield;
+			-webkit-appearance: textfield;
+			-moz-appearance: textfield;
+			font-size: 13px;
+			box-shadow: none;
+			border: none;
+			margin: 0 10px;
+
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+		}
+	}
+
+	.pagination__actions {
+		display: flex;
+		align-items: center;
+		margin-left: 15px;
+
+		img {
+			width: auto;
+			object-fit: contain;
+			padding: 0 5px;
+			cursor: pointer;
+		}
+
+		.arrow__prev {
+			height: 12px;
+			margin-right: 5px;
+			transform: rotate(180deg);
+		}
+
+		.arrow__next {
+			height: 12px;
+			margin-right: 5px;
+		}
+
+		.arrow__end {
+			height: 16px;
+		}
+
+		.arrow__start {
+			height: 16px;
+			transform: rotate(180deg);
+		}
+
+		.arrow__disabled {
+			opacity: 0.5;
+		}
+	}
+}
+
+.pagination__mobile {
+	.pages {
+		.page {
+			font-size: 15px;
+		}
+		.page:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+}

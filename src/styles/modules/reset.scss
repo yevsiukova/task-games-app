@@ -1,0 +1,106 @@
+html,
+body,
+#root {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	overflow-y: auto;
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+input {
+	border-radius: 4px;
+}
+
+#root {
+	background-position: right bottom, left top;
+	background-repeat: no-repeat;
+	justify-content: flex-start;
+}
+
+table,
+tbody,
+thead,
+tfoot,
+th,
+tr,
+td {
+	font-weight: unset;
+}
+
+select,
+select:focus-visible,
+button {
+	outline: none;
+	cursor: pointer;
+}
+
+textarea,
+input:active,
+input:focus,
+input:focus:active,
+input:active,
+input:focus-visible,
+button:active,
+button:focus,
+button:focus:active,
+button:active,
+button:focus-visible {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background-image: none;
+	outline: 0;
+	border-style: outset;
+	border: none;
+}
+
+input,
+textarea,
+button,
+select,
+a,
+div {
+	-webkit-tap-highlight-color: transparent;
+}
+
+input {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 20px;
+	caret-color: $black;
+
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover,
+	&:-webkit-autofill:focus,
+	&:-webkit-autofill:active {
+		box-shadow: 0 0 0 30px $black inset !important;
+		-webkit-box-shadow: 0 0 0 30px $black inset !important;
+		-webkit-text-fill-color: $white;
+		transition: background-color 2147483647s;
+		font-size: 20px;
+	}
+	&:-webkit-autofill:first-line {
+		font-size: 20px;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 10px;
+	background-color: $black;
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background-color: $gray;
+	box-shadow: 0 0 1px $black;
+	-webkit-box-shadow: 0 0 1px $black;
+}
